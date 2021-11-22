@@ -10,8 +10,6 @@ int main()
         if (input == 'A')
         {
             buildMatrix();
-            //printMat();
-            //printMatPath();
         }
         else if (input == 'B')
         {

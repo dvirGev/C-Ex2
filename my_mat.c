@@ -7,16 +7,11 @@ int matPath[size][size];
 void findShortestPath() {
     for (int k = 0; k < size; k++)
     {
-        // Pick all vertices as source one by one
         for (int i = 0; i < size; i++)
         {
-            // Pick all vertices as destination for the
-            // above picked source
             for (int j = 0; j < size; j++)
             {
-                // If vertex k is on the shortest path from
-                // i to j, then update the value of dist[i][j]
-                if (matPath[i][k] + matPath[k][j] < matPath[i][j] && i != j)
+                if (i != j && matPath[i][k] + matPath[k][j] < matPath[i][j])
                     matPath[i][j] = matPath[i][k] + matPath[k][j];
             }
         }
@@ -25,7 +20,6 @@ void findShortestPath() {
 //when press 'A'
 void buildMatrix()
 {
-    //int mat[size][size];
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
@@ -68,6 +62,7 @@ void printMat(){
         printf("]\n");
     }
 }
+//for me :)
 void printMatPath(){
     for (int i = 0; i < size; i++)
     {
