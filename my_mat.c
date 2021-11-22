@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define size 10
-#define intMax 1000
+#define intMax 500
 
 int mat[size][size];
 int matPath[size][size];
@@ -16,7 +16,7 @@ void findShortestPath() {
             {
                 // If vertex k is on the shortest path from
                 // i to j, then update the value of dist[i][j]
-                if (matPath[i][k] + matPath[k][j] < matPath[i][j])
+                if (matPath[i][k] + matPath[k][j] < matPath[i][j] && i != j)
                     matPath[i][j] = matPath[i][k] + matPath[k][j];
             }
         }
@@ -53,7 +53,7 @@ void path(int i, int j) {
         printf("-1\n");
     }
     else {
-        printf("%d\n", mat[i][j]);
+        printf("%d\n", matPath[i][j]);
     }
 }
 
@@ -64,6 +64,17 @@ void printMat(){
         for (int j = 0; j < size; j++)
         {
             printf("%d, ", mat[i][j]);
+        }
+        printf("]\n");
+    }
+}
+void printMatPath(){
+    for (int i = 0; i < size; i++)
+    {
+        printf("[ ");
+        for (int j = 0; j < size; j++)
+        {
+            printf("%d, ", matPath[i][j]);
         }
         printf("]\n");
     }

@@ -11,6 +11,7 @@ int main()
         {
             buildMatrix();
             //printMat();
+            //printMatPath();
         }
         else if (input == 'B')
         {

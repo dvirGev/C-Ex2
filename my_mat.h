@@ -4,3 +4,4 @@ void buildMatrix();
 void ifTherePath(int i, int j);
 void path(int i, int j);
 void printMat();
+void printMatPath();
