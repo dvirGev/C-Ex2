@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define size 10
-#define intMax 500
+#define intMax 1000
 
 int mat[size][size];
 int matPath[size][size];
